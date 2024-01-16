@@ -7,13 +7,13 @@ import Input from './components/Input';
 export default function App() {
   const appName = "My Mobile App"
   const [text,setText] = useState("")
-  console.log(text)
+  // console.log(text)
   
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Header name="My Mobile App" version={2}/>
-      <Input />
+      <Input text={text} onChangeText={setText}/>
       <Text>{text}</Text>
     </View>
   );

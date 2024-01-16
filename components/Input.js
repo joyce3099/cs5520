@@ -2,9 +2,8 @@ import { StyleSheet, Text, View , TextInput} from 'react-native'
 import React from 'react'
 import { useState } from 'react';
 
-const Input = () => {
-    const [text,setText] = useState("")
-    console.log(text)
+const Input = ({text, onChangeText}) => {
+    
 
     function changeTextHandler(changeText){
         console.log("user is typing",changeText)
@@ -17,7 +16,7 @@ const Input = () => {
         placeholder="type something" 
         style={styles.input} 
         value={text} 
-        onChangeText={changeTextHandler}
+        onChangeText={onChangeText}
       />
     </View>
   )
